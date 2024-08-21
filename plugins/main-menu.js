@@ -379,26 +379,6 @@ let toolsmenu = `
   ◈ .wikipedia
   ╰──────────⳹`
 
-let Aimenu = `
-  ✦ ───『 *AI* 』─── ⚝
-  ◈ .bing
-  ◈ .dalle
-  ◈ .chatgpt
-  ◈ .toanime
-  ◈ .gitagpt
-  ◈ .tocartoon
-  ◈ .ai
-  ◈ .bard
-  ◈ .alexa
-  ◈ .bingimg
-  ◈ .gemini
-  ╰──────────⳹
-  `
-let religionmenu = `
-  ✦ ───『 *religion* 』─── ⚝
-  ◈ .gita [verse_number]
-  ◈ .quran [surah_number|surah_name]
-  ╰──────────⳹`
 
 let botmenu = `
   ✦ ───『 *Bot Menu* 』─── ⚝
