@@ -6,8 +6,7 @@ import os from 'os'
 
 let groupmenu = `
    ✦ ───『 *group* 』─── ⚝
-  ◈ .getbio <@tag/reply>  Ⓛ
-  ◈ .animequote
+  ◈ .getbio <@tag/reply>
   ◈ .Setdesc <text>
   ◈ .setname <text>
   ◈ .add
@@ -40,7 +39,6 @@ let ownermenu = `
   ◈ .addprem <@tag>
   ◈ .addowner @user
   ◈ .allow <@tag>
-  ◈ .HEROKU
   ◈ .ban @user
   ◈ .banchat
   ◈ .tx
@@ -57,8 +55,8 @@ let ownermenu = `
   ◈ .reset <54xxx>
   ◈ .resetprefix
   ◈ .restart
-  ◈ ..setprefix
-  ◈ ..setprefix [symbol]
+  ◈ .setprefix
+  ◈ .setprefix [symbol]
   ◈ .unban @user
   ◈ .unbanchat
   ◈ .update
@@ -77,11 +75,6 @@ let funmenu = `
   ◈ .dare
   ◈ .flirt
   ◈ .gay @user
-  ◈ .pickupline
-  ◈ .question
-  ◈ .shayari
-  ◈ .ship
-  ◈ .yomamajoke
   ◈ .truth
   ◈ .waste @user
   ◈ .image
@@ -142,18 +135,9 @@ let dlmenu = `
   ◈ .wallpaper <query>
   ╰──────────⳹`
 
-let gamemenu = `
-  ✦ ───『 *game* 』─── ⚝
-  ◈ .slot <amount>
-  ◈ .chess [from to]
-  ◈ .chess delete
-  ◈ .chess join
-  ◈ .chess start
-  ◈ .delttt
-  ◈ .guessflag
-  ◈ .Maths <modes>
-  ◈ .ppt <rock/paper/scissors>
-  ◈ .tictactoe <tag number>
+let platinummenu = `
+  ✦ ───『 *Platinum Menu* 』─── ⚝
+  ◈ COMING SOON!...
   ╰──────────⳹`
 let logomenu = `
   ✦ ───『 *maker* 』─── ⚝
@@ -221,33 +205,9 @@ let audiomenu = `
   ◈ .tupai [vn]
   ╰──────────⳹`
 
-let newsmenu = `
-  ✦ ───『 *news* 』─── ⚝
-  ◈ .news
-  ◈ .technews
-  ◈ .ndtv
-  ╰──────────⳹
-  `
-let economy = `
-  ✦ ───『 *economy* 』─── ⚝
-  ◈ .addgold <@user>
-  ◈ .addxp <@user>
-  ◈ .bank
-  ◈ .buych
-  ◈ .cock-fight <amount>
-  ◈ .buy
-  ◈ .buyall
-  ◈ .daily
-  ◈ .deposit
-  ◈ .gamble <amount> <color(red/black)>
-  ◈ .give credit [amount] [@tag]
-  ◈ .levelup
-  ◈ .rank
-  ◈ .rob
-  ◈ .roulette <amount> <color(red/black)>
-  ◈ .wallet
-  ◈ .withdraw
-  ◈ .work
+let cryptomenu = `
+  ✦ ───『 *Xenpai* 』─── ⚝
+  ◈ .Coming Soon!...
   ╰──────────⳹`
 let animemenu = `
   ✦ ───『 *anime* 』─── ⚝
