@@ -7,7 +7,7 @@ import path from 'path'
 import { fileURLToPath } from 'url';
 
 figlet(
-  'GURU BOT',
+  'HORIMIYA BOT',
   {
     font: 'Ghost',
     horizontalLayout: 'default',
@@ -46,7 +46,7 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'Assets')));
 
 app.get('/', (req, res) => {
-  res.redirect('/guru.html');
+  res.redirect('/izumie.html');
 });
 
 app.listen(port, () => {
@@ -117,15 +117,15 @@ async function start(file) {
   })
 }
 
-start('Guru.js')
+start('Horimiya.js')
 
 process.on('unhandledRejection', () => {
   console.error(chalk.red(`Unhandled promise rejection. Bot will restart...`))
-  start('Guru.js')
+  start('Horimiya.js')
 })
 
 process.on('exit', code => {
   console.error(chalk.red(`Exited with code: ${code}`))
   console.error(chalk.red(`Bot will restart...`))
-  start('Guru.js')
+  start('Horimiya.js')
 })
