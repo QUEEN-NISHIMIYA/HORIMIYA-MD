@@ -26,7 +26,6 @@ global.__require = function require(dir = import.meta.url) {
 global.gurubot = 'https://www.guruapi.tech/api'
 
 import chalk from 'chalk'
-import * as cheerio from 'cheerio'
 import { spawn } from 'child_process'
 import lodash from 'lodash'
 import { JSONFile, Low } from 'lowdb'
