@@ -1,118 +1,131 @@
-{
-    "name": "horimiya",
-    "version": "2.1.0",
-    "description": "Advanced WhatsApp Ai",
-    "main": "index.js",
-    "type": "module",
-    "directories": {
-        "lib": "lib",
-        "src": "src",
-        "plugins": "plugins"
-    },
-    "engines": {
-        "node": ">=20.0.0"
-    },
-    "scripts": {
-        "start": "node index.js",
-        "test": "node test.js"
-    },
-    "keywords": [
-        "termux-whatsapp-bot",
-        "whatsapp-bot",
-        "whatsapp",
-        "js-whatsapp",
-        "whatsapp",
-        "izumie-bot",
-        "HORIMIYA-bot-md",
-        "multi-device",
-        "MD",
-        "baileys-md"
-    ],
-    "homepage": "https://github.com/QUEEN-NISHIMIYA/HORIMIYA-MD",
-    "author": {
-        "name": "GURU"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/QUEEN-NISHIMIYA/HORIMIYA-MD.git"
-    },
-    "bugs": {
-        "url": "https://github.com/QUEEN-NISHIMIYA/HORIMIYA-MD/issues"
-    },
-    "license": "Apache License 2.0",
-    "dependencies": {
-        "@adiwajshing/keyed-db": "^0.2.4",
-        "@bochilteam/scraper": "^5.0.1",
-        "@google/generative-ai": "0.1.3",
-        "@shineiichijo/marika": "^2.0.6",
-        "@vitalets/google-translate-api": "^9.2.0",
-        "@whiskeysockets/baileys": "^6.6.0",
-        "@xct007/frieren-scraper": "*",
-        "@xct007/tiktok-scraper": "*",
-        "acrcloud": "^1.4.0",
-        "aptoide-scraper": "^1.0.1",
-        "awesome-phonenumber": "^3.4.0",
-        "axios": "^1.4.0",
-        "chalk": "^5.1.0",
-        "cheerio": "^1.0.0-rc.12",
-        "chess.js": "*",
-        "colors": "1.4.0",
-        "didyoumean": "^1.2.2",
-        "dotenv": "^16.1.4",
-        "emoji-api": "^2.0.1",
-        "express": "^4.18.1",
-        "fb-downloader-scrapper": "^1.0.1",
-        "fg-ig": "^0.0.2",
-        "figlet": "^1.7.0",
-        "file-type": "^18.0.0",
-        "fluent-ffmpeg": "^2.1.2",
-        "formdata-node": "^5.0.0",
-        "g-i-s": "^2.1.6",
-        "google-it": "^1.6.4",
-        "heroku-client": "^3.1.0",
-        "hispamemes": "^1.0.7",
-        "human-readable": "^0.2.1",
-        "hxz-api": "^1.0.1",
-        "imagemaker.js": "*",
-        "imgur": "2.3.0",
-        "instagram-url-direct": "^1.0.12",
-        "jimp": "^0.16.1",
-        "jsdom": "^20.0.1",
-        "link-preview-js": "^3.0.0",
-        "lodash": "^4.17.21",
-        "lowdb": "^3.0.0",
-        "megajs": "^1.1.4",
-        "moment-timezone": "^0.5.37",
-        "mongoose": "^7.4.1",
-        "node-fetch": "^3.3.1",
-        "node-gtts": "^2.0.2",
-        "node-webpmux": "^3.1.3",
-        "pastebin-js": "^1.0.6",
-        "pdfkit": "^0.13.0",
-        "perf_hooks": "^0.0.1",
-        "pino": "^8.6.1",
-        "pino-pretty": "^9.1.1",
-        "qrcode": "^1.5.1",
-        "qrcode-terminal": "^0.12.0",
-        "readline": "^1.3.0",
-        "similarity": "^1.2.1",
-        "socket.io": "^4.5.2",
-        "syntax-error": "^1.4.0",
-        "tempmail.lol": "^4.1.0",
-        "terminal-image": "^2.0.0",
-        "truesearch": "^1.0.2",
-        "undici": "^6.19.4",
-        "url-regex-safe": "^3.0.0",
-        "wa-sticker-formatter": "^4.3.2",
-        "xfarr-api": "^1.0.3",
-        "yargs": "^17.6.0",
-        "youtube-yts": "^2.0.0",
-        "youtubedl-core": "npm:@distube/ytdl-core"
-    },
-    "overrides": {
-        "cache-manager": "5.2.2"
-    },
-    "devDependencies": {
-        "prettier": "^3.2.5"
+import chalk from 'chalk'
+import { spawn } from 'child_process'
+import express from 'express'
+import figlet from 'figlet'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url';
+
+figlet(
+  'HORIMIYA BOT',
+  {
+    font: 'Ghost',
+    horizontalLayout: 'default',
+    verticalLayout: 'default',
+  },
+  (err, data) => {
+    if (err) {
+      console.error(chalk.red('Figlet error:', err))
+      return
     }
-          }
+    console.log(chalk.yellow(data))
+  }
+)
+
+figlet(
+  'Advanced Whatsapp Bot',
+  {
+    horizontalLayout: 'default',
+    verticalLayout: 'default',
+  },
+  (err, data) => {
+    if (err) {
+      console.error(chalk.red('Figlet error:', err))
+      return
+    }
+    console.log(chalk.magenta(data))
+  }
+)
+
+const app = express()
+const port = process.env.PORT || 5000
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.join(__dirname, 'Assets')));
+
+app.get('/', (req, res) => {
+  res.redirect('/izumie.html');
+});
+
+app.listen(port, () => {
+  console.log(chalk.green(`Port ${port} is open`))
+})
+
+let isRunning = false
+
+async function start(file) {
+  if (isRunning) return
+  isRunning = true
+
+  const currentFilePath = new URL(import.meta.url).pathname
+  const args = [path.join(path.dirname(currentFilePath), file), ...process.argv.slice(2)]
+  const p = spawn(process.argv[0], args, {
+    stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
+  })
+
+  p.on('message', data => {
+    console.log(chalk.cyan(`✔️RECEIVED ${data}`))
+    switch (data) {
+      case 'reset':
+        p.kill()
+        isRunning = false
+        start.apply(this, arguments)
+        break
+      case 'uptime':
+        p.send(process.uptime())
+        break
+    }
+  })
+
+  p.on('exit', code => {
+    isRunning = false
+    console.error(chalk.red(`❌Exited with code: ${code}`))
+
+    if (code === 0) return
+
+    fs.watchFile(args[0], () => {
+      fs.unwatchFile(args[0])
+      start('Horimiya.js')
+    })
+  })
+
+  p.on('error', err => {
+    console.error(chalk.red(`Error: ${err}`))
+    p.kill()
+    isRunning = false
+    start('Guru.js')
+  })
+
+  const pluginsFolder = path.join(path.dirname(currentFilePath), 'plugins')
+
+  fs.readdir(pluginsFolder, async (err, files) => {
+    if (err) {
+      console.error(chalk.red(`Error reading plugins folder: ${err}`))
+      return
+    }
+    console.log(chalk.yellow(`Installed ${files.length} plugins`))
+
+    try {
+      const { default: baileys } = await import('@whiskeysockets/baileys')
+      const version = (await baileys.fetchLatestBaileysVersion()).version
+      console.log(chalk.yellow(`Using Baileys version ${version}`))
+    } catch (e) {
+      console.error(chalk.red(' Baileys library is not installed'))
+    }
+  })
+}
+
+start('Horimiya.js')
+
+process.on('unhandledRejection', () => {
+  console.error(chalk.red(`Unhandled promise rejection. Bot will restart...`))
+  start('Horimiya.js')
+})
+
+process.on('exit', code => {
+  console.error(chalk.red(`Exited with code: ${code}`))
+  console.error(chalk.red(`Bot will restart...`))
+  start('Horimiya.js')
+})
