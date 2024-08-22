@@ -38,7 +38,7 @@ figlet(
 )
 
 const app = express()
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 8000
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -87,7 +87,7 @@ async function start(file) {
 
     fs.watchFile(args[0], () => {
       fs.unwatchFile(args[0])
-      start('Guru.js')
+      start('Horimiya.js')
     })
   })
 
@@ -95,7 +95,7 @@ async function start(file) {
     console.error(chalk.red(`Error: ${err}`))
     p.kill()
     isRunning = false
-    start('Guru.js')
+    start('Horimiya.js')
   })
 
   const pluginsFolder = path.join(path.dirname(currentFilePath), 'plugins')
