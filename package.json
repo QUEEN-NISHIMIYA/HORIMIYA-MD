@@ -22,22 +22,22 @@
         "whatsapp",
         "js-whatsapp",
         "whatsapp",
-        "guru-bot",
-        "GURU-bot-md",
+        "Horimiya-bot",
+        "HORIMIYA-bot-md",
         "multi-device",
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/Guru322/GURU-BOT",
+    "homepage": "https://github.com/QUEEN-NISHIMIYA/HORIMIYA-MD",
     "author": {
-        "name": "GURU"
+        "name": "IZUMIE"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Guru322/GURU-BOT.git"
+        "url": "git+https://github.com/QUEEN-NISHIMIYA/HORIMIYA-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/Guru322/GURU-BOT/issues"
+        "url": "https://github.com/QUEEN-NISHIMIYA/HORIMIYA-MD/issues"
     },
     "license": "Apache License 2.0",
     "dependencies": {
