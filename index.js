@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+
 import { spawn } from 'child_process'
 import express from 'express'
 import figlet from 'figlet'
