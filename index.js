@@ -1,5 +1,5 @@
 {
-    "name": "Horimiya",
+    "name": "horimiya",
     "version": "2.1.0",
     "description": "Advanced WhatsApp Ai",
     "main": "index.js",
