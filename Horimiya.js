@@ -375,7 +375,7 @@ async function connectionUpdate(update) {
   if (connection === 'open') {
     const { jid, name } = conn.user
 
-    let msgf = `Hai🤩${name} Congrats you have successfully deployed HORIMIYA-BOT\nJoin my support Group for any Query\n https://chat.whatsapp.com/Krn1VGvyWqP5brTWbNoZsp`
+    let msgf = `Hai🤩${name} Congrats you have successfully deployed GURU-BOT\nJoin my support Group for any Query\n https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp`
 
     let gmes = conn.sendMessage(
       jid,
