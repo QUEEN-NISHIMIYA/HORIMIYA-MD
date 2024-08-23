@@ -87,7 +87,7 @@ async function start(file) {
 
     fs.watchFile(args[0], () => {
       fs.unwatchFile(args[0])
-      start('Horimiya.js')
+      start('Guru.js')
     })
   })
 
@@ -117,15 +117,15 @@ async function start(file) {
   })
 }
 
-start('Horimiya.js')
+start('Guru.js')
 
 process.on('unhandledRejection', () => {
   console.error(chalk.red(`Unhandled promise rejection. Bot will restart...`))
-  start('Horimiya.js')
+  start('Guru.js')
 })
 
 process.on('exit', code => {
   console.error(chalk.red(`Exited with code: ${code}`))
   console.error(chalk.red(`Bot will restart...`))
-  start('Horimiya.js')
+  start('Guru.js')
 })
