@@ -1,6 +1,6 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'
 import './config.js'
-import * as cheerio from 'cheerio'
+
 import dotenv from 'dotenv'
 import { existsSync, readFileSync, readdirSync, unlinkSync, watch } from 'fs'
 import { createRequire } from 'module'
@@ -213,10 +213,10 @@ global.loadDatabase = async function loadDatabase() {
 loadDatabase()
 global.authFolder = `session`
 const { state, saveCreds } = await useMultiFileAuthState(global.authFolder)
-let { version, isLatest } = await fetchLatestWaWebVersion()
+//let { version, isLatest } = await fetchLatestWaWebVersion()
 
 const connectionOptions = {
-  version,
+  version: [2, 3000, 1015901307],
   logger: Pino({
     level: 'fatal',
   }),
@@ -375,7 +375,7 @@ async function connectionUpdate(update) {
   if (connection === 'open') {
     const { jid, name } = conn.user
 
-    let msgf = `Hai🤩${name} Congrats you have successfully deployed GURU-BOT\nJoin my support Group for any Query\n https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp`
+    let msgf = `Hai🤩${name} Congrats you have successfully deployed HORIMIYA-BOT\nJoin my support Group for any Query\n https://chat.whatsapp.com/Krn1VGvyWqP5brTWbNoZsp`
 
     let gmes = conn.sendMessage(
       jid,
