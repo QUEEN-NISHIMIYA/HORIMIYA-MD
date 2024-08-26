@@ -77,6 +77,12 @@ main()
 
 await delay(1000 * 10)
 
+async function gandu() {
+  try {
+    const packageJson = readFileSync('package.json', 'utf8')
+    const packageData = JSON.parse(packageJson)
+    const gnome = packageData.author && packageData.author.name
+
     if (!gnome) {
       console.log('LOl')
       process.exit(1)
