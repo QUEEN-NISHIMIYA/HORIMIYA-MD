@@ -385,7 +385,7 @@ async function connectionUpdate(update) {
 
   if (connection === 'open') {
     const { jid, name } = conn.user
-    const msg = `Hai🤩 ${name}, Congrats you have successfully deployed GURU-BOT\nJoin my support Group for any Query\n https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp`
+    const msg = `Hai🤩 ${name}, Congrats you have successfully deployed HORIMIYA\nJoin my support Group for any Query\n https://chat.whatsapp.com/Krn1VGvyWqP5brTWbNoZsp`
 
     await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null })
 
