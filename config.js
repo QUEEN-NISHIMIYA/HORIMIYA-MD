@@ -79,7 +79,7 @@ global.fgsc = 'https://github.com/QUEEN-NISHIMIYA/HORIMIYA-MD'
 global.fgyt = 'https://youtube.com/@izumie-kun'
 global.fgpyp = 'https://youtube.com/@izumie-kun'
 global.fglog = 'https://raw.githubusercontent.com/Guru322/api/Guru/guru.jpg'
-global.thumb = fs.readFileSync('./Assets/Gurulogo.jpg')
+global.thumb = fs.readFileSync('./Assets/Xenpai.jpg')
 
 global.wait = '*⌛ _Charging..._*\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '⌛'
