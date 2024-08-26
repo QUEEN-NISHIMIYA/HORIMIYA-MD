@@ -1,7 +1,6 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'
 import './config.js'
 
-
 import dotenv from 'dotenv'
 import { existsSync, readFileSync, readdirSync, unlinkSync, watch } from 'fs'
 import { createRequire } from 'module'
@@ -385,7 +384,7 @@ async function connectionUpdate(update) {
 
   if (connection === 'open') {
     const { jid, name } = conn.user
-    const msg = `Hai🤩 ${name}, Congrats you have successfully deployed HORIMIYA\nJoin my support Group for any Query\n https://chat.whatsapp.com/Krn1VGvyWqP5brTWbNoZsp`
+    const msg = `Hai🤩 ${name}, Congrats you have successfully deployed GURU-BOT\nJoin my support Group for any Query\n https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp`
 
     await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null })
 
