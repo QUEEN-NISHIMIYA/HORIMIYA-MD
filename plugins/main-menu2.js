@@ -26,7 +26,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         ? conn.user.jid
         : m.sender
   if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
-  let pp = './Assets/Gurulogo.jpg'
+  let pp = './Assets/Xenpai.jpg'
   let user = global.db.data.users[who]
   let { name, exp, diamond, lastclaim, registered, regTime, age, level, role, warn } =
     global.db.data.users[who]
@@ -71,7 +71,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ┃ 📚  *Total Users:* ${totaluser} 
 ┗━━━━━━━━━━━━━┛
 
-💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help2. It's like my magic spell book!_* 💡
+💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help. It's like my magic spell book!_* 💡
 `
 
   conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, null, rpyt)
@@ -79,7 +79,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 }
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['menu2', 'help2']
+handler.command = ['menu', 'help']
 
 export default handler
 function clockString(ms) {
