@@ -8,7 +8,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         : m.sender
   if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
 
-  let pp = './Assets/Gurulogo.jpg'
+  let pp = './Assets/Xenpai.jpg'
   let more = String.fromCharCode(8206)
   let readMore = more.repeat(850)
 
@@ -69,7 +69,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
    ⎪⌲👑 _${usedPrefix}groups_
    ⎪⌲👑 _${usedPrefix}blocklist_
    ⎪⌲👑 _${usedPrefix}listprem_
-   ⎪⌲👑    Guru
+   ⎪⌲👑    Izumie
    ┗━━━ʕ•㉨•ʔ━━━┛` // Your bot menu message here
       break
     case 'ownermenu':
