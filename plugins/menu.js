@@ -62,6 +62,14 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ┃ 📚  *Total Users:* ${totaluser} 
 ┗━━━━━━━━━━━━━┛
 
+🎀Type the menu name with prefix to get desired menu
+1.ownermenu
+2.platinummenu
+3.aimenu
+4.stickermenu
+5.downloadmenu
+6.audiomenu
+
 `
 
   conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, null, rpyt)
@@ -70,33 +78,4 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 handler.help = ['main']
 handler.tags = ['group']
 handler.command = ['menu', 'help']
-
 export default handler
-function clockString(ms) {
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
-}
-
-function ucapan() {
-  const time = moment.tz('Asia/Kolkata').format('HH')
-  let res = 'happy early in the day☀️'
-  if (time >= 4) {
-    res = 'Good Morning 🌄'
-  }
-  if (time >= 10) {
-    res = 'Good Afternoon ☀️'
-  }
-  if (time >= 15) {
-    res = 'Good Afternoon 🌇'
-  }
-  if (time >= 18) {
-    res = 'Good Night 🌙'
-  }
-  return res
-}
-const quotes = [
-  "I'm not lazy, I'm just on my energy saving mode.",
-  'Life is short, smile while you still have teeth.'
-]
