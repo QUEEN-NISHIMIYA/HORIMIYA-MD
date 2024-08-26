@@ -24,8 +24,8 @@ for (let i = 0; i < ownerlist.length; i += 2) {
 //global.pairingNumber = "" //put your bot number here
 
 global.mods = ['919961450351', '918593848438']
-global.prems = ['917605902011', '32460248586', '919398758484']
-global.allowed = ['917605902011', '32460248586', '19152999993']
+global.prems = ['918593848438', '916282420369', '917902333899']
+global.allowed = ['918593848438', '916282420369', '917902333899']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = [
@@ -71,14 +71,13 @@ global.APIKeys = {
 // Sticker WM
 global.botname = process.env.BOTNAME
 global.premium = 'true'
-global.packname = 'GURU┃ᴮᴼᵀ'
-global.author = 'ᴳᵘʳᵘ ˢᵉⁿˢᵉⁱ'
-global.menuvid = 'https://i.imgur.com/AjDzGgG.mp4'
-global.igfg = '▢ Follow on Instagram\nhttps://www.instagram.com/guru.json\n'
-global.dygp = 'https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp'
-global.fgsc = 'https://github.com/Guru322/GURU-BOT'
-global.fgyt = 'https://youtube.com/@Asliguru'
-global.fgpyp = 'https://youtube.com/@Asliguru'
+global.packname = '𝗜⃪𝗭⃪𝗨⃪𝗠⃪𝗜⃪𝗘⃪ 𝗫⃪𝗘⃪𝗡⃪𝗣⃪𝗔⃪𝗜⃪🗿'
+global.author = '【+】【9】【1】 【8】【5】【9】【3】【8】【4】【8】【4】【3】【8】'
+global.igfg = '▢ Follow on Instagram\nhttps://www.instagram.com/izumie_xenpai\n'
+global.dygp = 'https://chat.whatsapp.com/Krn1VGvyWqP5brTWbNoZsp'
+global.fgsc = 'https://github.com/QUEEN-NISHIMIYA/HORIMIYA-MD'
+global.fgyt = 'https://youtube.com/@izumie-kun'
+global.fgpyp = 'https://youtube.com/@izumie-kun'
 global.fglog = 'https://raw.githubusercontent.com/Guru322/api/Guru/guru.jpg'
 global.thumb = fs.readFileSync('./Assets/Gurulogo.jpg')
 
