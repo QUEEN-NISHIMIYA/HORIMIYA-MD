@@ -77,6 +77,10 @@ main()
 
 await delay(1000 * 10)
 
+    if (!gnome) {
+      console.log('LOl')
+      process.exit(1)
+    }
 
     const lund = Buffer.from('Z3VydQ==', 'base64').toString()
     const lawde = Buffer.from(
