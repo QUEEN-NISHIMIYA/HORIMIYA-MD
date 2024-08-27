@@ -65,15 +65,15 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ▢ *${chats.length}* Total Chats
 
 *≡ OWNER*
-  *GURU*
+  *Izumie*
 ▢ Instagram :
-  • https://instagram.com/asli_guru69
+  • https://instagram.com/izumie_xenpai
 ▢ GitHub :
-  • https://github.com/Guru322
+  • https://github.com/IZUMIE-XENPAI
 ▢ Telegram : 
-  • t.me/i_want_to_be_isekaied (GURU) 
+  • https://telegram.me/IZUMIE_XENPAI
 ▢ YouTube : 
-  • https://youtube.com/@Asliguru
+  • https://youtube.com/@izumie-kun
 
  *≡ S E R V E R*
 *🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
