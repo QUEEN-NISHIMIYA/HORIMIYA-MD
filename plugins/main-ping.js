@@ -2,7 +2,7 @@ import { exec } from 'child_process'
 import speed from 'performance-now'
 
 let handler = async (m, { conn }) => {
-  let thumbnail = 'https://www.guruapi.tech/K.jpg'
+  let thumbnail = 'https://izumie-img.vercel.app/Main/izumie/HORI-MD/3.jpg'
   let fgg = {
     key: { fromMe: false, participant: `0@s.whatsapp.net`, remoteJid: 'status@broadcast' },
     message: {
