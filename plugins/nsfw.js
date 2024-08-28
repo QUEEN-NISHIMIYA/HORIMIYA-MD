@@ -166,7 +166,7 @@ handler.tags = ['nsfw']
 handler.diamond = true
 handler.group = true
 handler.register = true
-
+handler.premium = true
 export default handler
 
 function pickRandom(list) {
