@@ -19,38 +19,28 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         '*Get ready for the ride, here are your ticket options:*\n\n' +
         '🤖 *' +
         usedPrefix +
-        "botmenu* - The Bot's secret control panel. What's your command, oh great one?\n\n" +
-        '👑 *' +
+        '*botmenu*' +
         usedPrefix +
-        "ownermenu* - The sacred scroll only for the chosen one. Yep, that's you, Boss!\n\n" +
-        '🧑‍🤝‍🧑 *' +
+        '*ownermenu*' +
         usedPrefix +
-        'groupmenu* - Group shenanigans central! Unite, chat, conquer!\n\n' +
-        '📥 *' +
+        '*groupmenu*' +
         usedPrefix +
-        "dlmenu* - 'DL' stands for 'Delicious Loot'. Come grab your goodies!\n\n" +
-        '🎉 *' +
+        '*dlmenu*' +
         usedPrefix +
-        "funmenu* - The bot's party hat. Games, jokes and instant ROFLs. Let's get this party started!\n\n" +
-        '💰 *' +
+        '*funmenu*' +
         usedPrefix +
-        'economymenu* - Bling bling! Your personal vault of virtual economy. Spend or save? Choose wisely!\n\n' +
-        '🎮 *' +
+        '*economymenu*' +
         usedPrefix +
-        'gamemenu* - Enter the gaming arena. May the odds be ever in your favor!\n\n' +
-        '🎨 *' +
+        '*gamemenu*' +
         usedPrefix +
-        'stickermenu* - A rainbow of stickers for your inner artist. Make your chats pop!\n\n' +
-        '🧰 *' +
+        '*stickermenu*' +
         usedPrefix +
-        "toolmenu* - Your handy-dandy toolkit. What's your pick, genius?\n\n" +
-        '🎩 *' +
+        '*toolmenu*' +
         usedPrefix +
-        'logomenu* - Create a logo that screams YOU. Or whispers. You choose the volume.\n\n' +
-        '🌙 *' +
+        '*logomenu*' +
         usedPrefix +
-        'nsfwmenu* - The After Dark menu. But remember, sharing adult secrets must be consent-based.'
-      break
+        '*nsfwmenu*'
+        break
 
     case 'botmenu':
       lkr = `❀° ┄──•••───╮
@@ -273,15 +263,12 @@ let handler = async (m, { conn, usedPrefix, command }) => {
      ⎪⌲👑 _${usedPrefix}autosticker_
      ⎪⌲👑 _${usedPrefix}pdf_
      ⎪⌲👑 _${usedPrefix}whatmusic_
-     ⎪⌲👑 _${usedPrefix}calc_
-     ⎪⌲👑 _${usedPrefix}google_
      ⎪⌲👑 _${usedPrefix}lyrics_
      ⎪⌲👑 _${usedPrefix}readmore_
      ⎪⌲👑 _${usedPrefix}ssweb_
      ⎪⌲👑 _${usedPrefix}tts_
      ⎪⌲👑 _${usedPrefix}translate_
      ⎪⌲👑 _${usedPrefix}tourl_
-     ⎪⌲👑 _${usedPrefix}wikipedia_
      ⎪⌲👑 _${usedPrefix}nowa_
      ⎪⌲👑 _${usedPrefix}qrmaker_
      ⎪⌲👑 _${usedPrefix}readqr_
@@ -340,6 +327,7 @@ handler.command = [
   'ownermenu',
   'groupmenu',
   'dlmenu',
+  'animememu',
   'downloadermenu',
   'economymenu',
   'funmenu',
