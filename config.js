@@ -71,8 +71,8 @@ global.APIKeys = {
 // Sticker WM
 global.botname = process.env.BOTNAME
 global.premium = 'true'
-global.packname = '𝗜⃪𝗭⃪𝗨⃪𝗠⃪𝗜⃪𝗘⃪ 𝗫⃪𝗘⃪𝗡⃪𝗣⃪𝗔⃪𝗜⃪🗿'
-global.author = '【+】【9】【1】 【8】【5】【9】【3】【8】【4】【8】【4】【3】【8】'
+global.packname = '𝗜⃪𝗭⃪𝗨⃪𝗠⃪𝗜⃪𝗘⃪'
+global.author = '𝗫⃪𝗘⃪𝗡⃪𝗣⃪𝗔⃪𝗜⃪🗿'
 global.igfg = '▢ Follow on Instagram\nhttps://www.instagram.com/izumie_xenpai\n'
 global.dygp = 'https://chat.whatsapp.com/Krn1VGvyWqP5brTWbNoZsp'
 global.fgsc = 'https://github.com/QUEEN-NISHIMIYA/HORIMIYA-MD'
