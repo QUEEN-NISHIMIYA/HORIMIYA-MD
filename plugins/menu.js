@@ -21,7 +21,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
   // Text message content
   const menuText = "Hello @" + m.sender.split('@')[0] + 
-     "! Here is the menu:  \n\n1. Option 1 \n2. Option 2 \n3. Option 3"
+     "! Here is the menu🎀:  \n\n1.𝙱𝙾𝚃𝙼𝙴𝙽𝚄\n2.𝙾𝚆𝙽𝙴𝚁𝙼𝙴𝙽𝚄\n3.𝙿𝚁𝙴𝙼𝙸𝚄𝙼𝙼𝙴𝙽𝚄\n4.𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝙼𝙴𝙽𝚄\n5.𝙶𝚁𝙾𝚄𝙿𝙼𝙴𝙽𝚄\n6.𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝙼𝙴𝙽𝚄\𝚗7.𝙻𝙾𝙶𝙾𝙼𝙴𝙽𝚄\n8.𝙽𝚂𝙵𝚆𝙼𝙴𝙽𝚄"
 
   // Sending the message with image and hidden link
   await conn.sendMessage(
@@ -47,6 +47,6 @@ let handler = async (m, { conn, usedPrefix }) => {
 handler.tags = ['main']
 handler.help = ['menu']
 handler.command = /^(menu)$/i
-handler.group = true
+
 
 export default handler
