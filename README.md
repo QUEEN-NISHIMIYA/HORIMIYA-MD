@@ -1,7 +1,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## Horimiya-MD Whatsapp Bot
 HORIMIYA-MD - Simple whatsapp Multi Device bot based on 
-Xasena 
+GURU-Ai
 
 ***
 
@@ -20,29 +20,3 @@ Xasena
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
  
-
-### External-Plugins
-
-<details close>
-<summary>Read More</summary>
-
-<br>
-
-
-* [`External PLUGINS`](https://github.com/Louis-XD/External-Plugins-Ezra)
-
-### Thanks To
-
-<details close>
-<summary>Read More</summary>
-
-<br>
-
-* [`SPARKY`](https://github.com/A-S-W-I-N-S-P-A-R-K-Y)
-* [`LOKI`](https://github.com/Loki-xer)
-
-
- </details>
-
- 
-
