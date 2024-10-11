@@ -1,10 +1,10 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   // Sound
   let name = m.pushName || conn.getName(m.sender)
-  var vn = 'https://cdn.jsdelivr.net/gh/QUEEN-NISHIMIYA/INTRO-WEBSITE@main/Assets/izumie.mp3'
+  var vn = 'https://cdn.jsdelivr.net/gh/QUEEN-NISHIMIYA/HORIMIYA-MD@main/Assets/mp3/Karimizhi.mp3'
   let url = 'https://github.com/QUEEN-NISHIMIYA/HORIMIYA-MD'
   let murl = 'https://youtu.be/DibiLc17dh0?si=xp9bQ-_frEyDB1-i'
-  let img = 'https://izumie-img.vercel.app/Main/izumie/HORI-MD/4.jpg'
+  let img = 'https://izumie-img.vercel.app/Main/izumie/IZUMIE/3.jpg'
   let con = {
     key: {
       fromMe: false,
