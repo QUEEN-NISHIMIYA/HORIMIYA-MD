@@ -50,6 +50,7 @@
         "@whiskeysockets/baileys": "^6.6.0",
         "@xct007/frieren-scraper": "*",
         "@xct007/tiktok-scraper": "*",
+        "puppeteer":"20.8.1",
         "acrcloud": "^1.4.0",
         "aptoide-scraper": "^1.0.1",
         "awesome-phonenumber": "^3.4.0",
