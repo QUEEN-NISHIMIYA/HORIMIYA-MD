@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
   let taguser = '@' + m.sender.split('@s.whatsapp.net')[0]
   let av = `./Assets/mp3/${pickRandom(['Jeene', 'Karimizhi', 'Onnam', 'Sundariye', 'Vennila'])}.mp3`
 
-  m.reply(`Hello ${taguser} Need help?  type /help `)
+  m.reply(`Hello ${taguser} Need help?  type .help `)
   conn.sendFile(m.chat, av, 'audio.mp3', null, m, true, { type: 'audioMessage', ptt: true })
 }
 
