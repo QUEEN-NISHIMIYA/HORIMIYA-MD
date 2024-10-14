@@ -1,52 +1,149 @@
+import { generateWAMessageFromContent } from '@whiskeysockets/baileys'
+const {
+    proto,
+    generateWAMessage,
+    areJidsSameUser,
+    prepareWAMessageMedia
+} = (await import('@whiskeysockets/baileys')).default
+import { createHash } from 'crypto'
+import PhoneNumber from 'awesome-phonenumber'
+import { canLevelUp, xpRange } from '../lib/levelling.js'
+
 import fetch from 'node-fetch'
+import fs from 'fs'
+const { levelling } = '../lib/levelling.js'
+import moment from 'moment-timezone'
+import { promises } from 'fs'
+import { join } from 'path'
+const time = moment.tz('Asia/Karachi').format('HH')
+let wib = moment.tz('Asia/Karachi').format('HH:mm:ss')
+//import db from '../lib/database.js'
 
-// Helper function to fetch the image buffer
-const getBuffer = async (url) => {
-  try {
-    const response = await fetch(url)
-    const buffer = await response.arrayBuffer()
-    return Buffer.from(buffer)
-  } catch (error) {
-    console.error('Failed to get buffer', error)
-    throw new Error('Failed to get buffer')
-  }
-}
+let handler = async (m, { conn, usedPrefix, command}) => {
 
-// Menu command handler
-let handler = async (m, { conn, usedPrefix }) => {
-  const img = 'https://izumie-img.vercel.app/Main/izumie/HORI-MD/3.jpg' // Replace with your image URL
+   let d = new Date(new Date + 3600000)
+    let locale = 'en'
+    let week = d.toLocaleDateString(locale, { weekday: 'long' })
+    let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
+    let _uptime = process.uptime() * 1000
+    let uptime = clockString(_uptime)
+let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
+if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
+//let pp = (thumb)
+let user = global.db.data.users[m.sender]
+let { name, exp, diamond, lastclaim, registered, regTime, age, level, role, warn } = global.db.data.users[who]
+let { min, xp, max } = xpRange(user.level, global.multiplier)
+let username = conn.getName(who)
+let math = max - xp
+let prem = global.prems.includes(who.split`@`[0])
+let sn = createHash('md5').update(who).digest('hex')
+let totaluser = Object.values(global.db.data.users).length 
+let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
+let more = String.fromCharCode(8206)
+let readMore = more.repeat(850) 
+let greeting = ucapan()
+let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
-  // Fetch the image buffer
-  const thumbnail = await getBuffer(img)
+let str = `
+  『 *GLOBAL-MD* 』  
+  
+╔┈┈┈┈┈┈┈┈┈┈┈┈┈
+╎❒ *CREATOR : QASIM*
+╎
+╎❒ *PLUGINS : 250 +*
+╎
+╎❒ *FEATURE : 700 +*
+╚┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-  // Text message content
-  const menuText = "Hello @" + m.sender.split('@')[0] + 
-     '! Here is the menu🎀:  \n\n1.𝙱𝙾𝚃𝙼𝙴𝙽𝚄🤷🏼‍♂️\n\n2.𝙾𝚆𝙽𝙴𝚁𝙼𝙴𝙽𝚄🤤💗\n\n3.𝙿𝚁𝙴𝙼𝙸𝚄𝙼𝙼𝙴𝙽𝚄☠️\n\n4.𝙵𝚄𝙽𝚁𝙼𝙴𝙽𝚄👀\n\n5.𝙶𝚁𝙾𝚄𝙿𝙼𝙴𝙽𝚄🥶🩷\n\n6.𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝙼𝙴𝙽𝚄☣️\n\𝚗7.𝙻𝙾𝙶𝙾𝙼𝙴𝙽𝚄❤️‍🔥\n\n8.𝙽𝚂𝙵𝚆𝙼𝙴𝙽𝚄🔇\n\n9.𝚁𝙴𝙰𝙲𝚃𝙸𝙾𝙽𝙼𝙴𝙽𝚄🔖'
+© 2024 *GlobalTechInfo*`
 
-  // Sending the message with image and hidden link
-  await conn.sendMessage(
-    m.chat,
-    {
-      text: menuText,
-      contextInfo: {
-        mentionedJid: [m.sender],
-        externalAdReply: {
-          title: 'XeNpAi',
-          body: 'HoRiMiYa-MD',
-          thumbnail: thumbnail,
-          sourceUrl: 'https://chat.whatsapp.com/Krn1VGvyWqP5brTWbNoZsp', // Hidden link
-          mediaType: 1,
-          renderLargerThumbnail: true,
+let msg = generateWAMessageFromContent(m.chat, {
+
+  viewOnceMessage: {
+
+    message: {
+
+        "messageContextInfo": {
+          "deviceListMetadata": {},
+          "deviceListMetadataVersion": 2
         },
-      },
-    },
-    { quoted: m } // Reply to the original message
-  )
+
+        interactiveMessage: proto.Message.InteractiveMessage.create({
+          body: proto.Message.InteractiveMessage.Body.create({
+            text: str
+          }),
+
+          footer: proto.Message.InteractiveMessage.Footer.create({
+            text: "Use The Below Buttons"
+          }),
+
+          header: proto.Message.InteractiveMessage.Header.create({
+          ...(await prepareWAMessageMedia({ image : { url: 'https://i.ibb.co/G2dh9cB/qasim.jpg'}}, { upload: conn.waUploadToServer})), 
+            title: null,
+            subtitle: null,
+            hasMediaAttachment: false
+
+          }),
+          nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+            buttons: [
+              {
+                "name": "single_select",
+                "buttonParamsJson": 
+                                "{\"title\":\"BUTTON MENU\",\"sections\":[{\"title\":\"HERE IS BUTTONS MENU\",\"highlight_label\":\"GLOBAL\",\"rows\":[{\"header\":\"\",\"title\":\"🧲 Bot Menu\",\"description\":\"The Bot's secret control panel.\",\"id\":\".botmenu\"},{\"header\":\"\",\"title\":\"🪅 Owner Menu\",\"description\":\"Yep, that's for you, Boss!\",\"id\":\".ownermenu\"},{\"header\":\"\",\"title\":\"♦️ Group Menu\",\"description\":\"Group shenanigans central!\",\"id\":\".groupmenu\"},{\"header\":\"\",\"title\":\"🗂️ Download Menu\",\"description\":\"'DL' stands for 'Delicious Loot'.\",\"id\":\".dlmenu\"},{\"header\":\"\",\"title\":\"🎭 Fun Menu\",\"description\":\"The bot's party hat. Games, jokes and instant ROFLs.\",\"id\":\".funmenu\"},{\"header\":\"\",\"title\":\"💰 Economy Menu\",\"description\":\"Your personal vault of virtual economy.\",\"id\":\".economymenu\"},{\"header\":\"\",\"title\":\"🎮 Game Menu\",\"description\":\"Enter the gaming arena.\",\"id\":\".gamemenu\"},{\"header\":\"\",\"title\":\"🪢 Sticker Menu\",\"description\":\"A rainbow of stickers.\",\"id\":\".stickermenu\"},{\"header\":\"\",\"title\":\"🛠️ Tool Menu\",\"description\":\"Your handy-dandy toolkit.\",\"id\":\".toolmenu\"},{\"header\":\"\",\"title\":\"🐯 Logo Menu\",\"description\":\"Create a logo that screams You.\",\"id\":\".logomenu\"},{\"header\":\"\",\"title\":\"💃 NSFW Menu\",\"description\":\"The After Dark menu.\",\"id\":\".nsfwmenu\"}]}]}" 
+                },
+                 {
+                "name": "quick_reply",
+                "buttonParamsJson": 
+                                "{\"display_text\":\"LIST MENU \",\"id\":\".menu2\"}"
+                 },
+                  {
+                  "name": "cta_url",
+                  "buttonParamsJson": "{\"display_text\":\"OWNER 🌟\",\"Url\":\"https://wa.me/message/HA35ZL76JSHJB1\",\"merchant_url\":\"https://wa.me/message/HA35ZL76JSHJB1\"}"
+                  },
+                  {
+                  "name": "cta_url",
+                 "buttonParamsJson": "{\"display_text\":\"BOT REPO\",\"url\":\"https://github.com/GlobalTechInfo/GLOBAL-MD\",\"merchant_url\":\"https://github.com/GlobalTechInfo\"}"
+              }
+           ],
+          })
+        })
+    }
+  }
+}, {})
+
+await conn.relayMessage(msg.key.remoteJid, msg.message, {
+
+  messageId: msg.key.id
+
+})
+
+
 }
-
-handler.tags = ['main']
-handler.help = ['menu']
-handler.command = /^(menu)$/i
-
+handler.help = ['main']
+handler.tags = ['group']
+handler.command = ['menu', 'help','h','commands'] 
 
 export default handler
+function clockString(ms) {
+    let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+    let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+    let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+    return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}  
+
+    function ucapan() {
+      const time = moment.tz('Asia/Karachi').format('HH')
+      let res = "happy early in the day☀️"
+      if (time >= 4) {
+        res = "Good Morning 🥱"
+      }
+      if (time >= 10) {
+        res = "Good Afternoon 🫠"
+     }
+      if (time >= 15) {
+        res = "Good Afternoon 🌇"
+      }
+      if (time >= 18) {
+       res = "Good Night 🌙"
+      }
+      return res
+          }
