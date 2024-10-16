@@ -45,17 +45,17 @@ let greeting = ucapan()
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
 let str = `
-  『 *GLOBAL-MD* 』  
+  『 *HORIMIYA-MD* 』  
   
 ╔┈┈┈┈┈┈┈┈┈┈┈┈┈
-╎❒ *CREATOR : QASIM*
+╎❒ *CREATOR : IZUMIE*
 ╎
 ╎❒ *PLUGINS : 250 +*
 ╎
-╎❒ *FEATURE : 700 +*
+╎❒ *FEATURE : 400 +*
 ╚┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-© 2024 *GlobalTechInfo*`
+© 2024 *Izumie Xenpai*`
 
 let msg = generateWAMessageFromContent(m.chat, {
 
@@ -78,7 +78,7 @@ let msg = generateWAMessageFromContent(m.chat, {
           }),
 
           header: proto.Message.InteractiveMessage.Header.create({
-          ...(await prepareWAMessageMedia({ image : { url: 'https://i.ibb.co/G2dh9cB/qasim.jpg'}}, { upload: conn.waUploadToServer})), 
+          ...(await prepareWAMessageMedia({ image : { url: 'https://izumie-img.vercel.app/Main/izumie/IZUMIE/3.jpg'}}, { upload: conn.waUploadToServer})), 
             title: null,
             subtitle: null,
             hasMediaAttachment: false
@@ -98,12 +98,8 @@ let msg = generateWAMessageFromContent(m.chat, {
                  },
                   {
                   "name": "cta_url",
-                  "buttonParamsJson": "{\"display_text\":\"OWNER 🌟\",\"Url\":\"https://wa.me/message/HA35ZL76JSHJB1\",\"merchant_url\":\"https://wa.me/message/HA35ZL76JSHJB1\"}"
+                  "buttonParamsJson": "{\"display_text\":\"OWNER 🌟\",\"Url\":\"https://wa.me/918593848438\",\"merchant_url\":\"https://wa.me/message/918593848438\"}"
                   },
-                  {
-                  "name": "cta_url",
-                 "buttonParamsJson": "{\"display_text\":\"BOT REPO\",\"url\":\"https://github.com/GlobalTechInfo/GLOBAL-MD\",\"merchant_url\":\"https://github.com/GlobalTechInfo\"}"
-              }
            ],
           })
         })
