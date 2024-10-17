@@ -9,7 +9,7 @@ GURU-Ai
 
 1. Get Session I'D.
     <br>
-<a href='https://horimiya-paircode.onrender.com/' target="_blank"><img alt='QR/PAIR' src='https://img.shields.io/badge/get_session-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://hori-paircode.onrender.com' target="_blank"><img alt='QR/PAIR' src='https://img.shields.io/badge/get_session-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 ***
 * Join Group For Help
