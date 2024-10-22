@@ -76,18 +76,9 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-                                "{\"title\":\"BUTTON MENU\",\"sections\":[{\"title\":\"HERE IS BUTTONS MENU\",\"highlight_label\":\"GLOBAL\",\"rows\":[{\"header\":\"\",\"title\":\"🧲 Bot Menu\",\"description\":\"The Bot's secret control panel.\",\"id\":\".botmenu\"},{\"header\":\"\",\"title\":\"🪅 Owner Menu\",\"description\":\"Yep, that's for you, Boss!\",\"id\":\".ownermenu\"},{\"header\":\"\",\"title\":\"♦️ Group Menu\",\"description\":\"Group shenanigans central!\",\"id\":\".groupmenu\"},{\"header\":\"\",\"title\":\"🪢 Sticker Menu\",\"description\":\"A rainbow of stickers.\",\"id\":\".stickermenu\"},{\"header\":\"\",\"title\":\"🛠️ Tool Menu\",\"description\":\"Your handy-dandy toolkit.\",\"id\":\".toolmenu\"},{\"header\":\"\",\"title\":\"🐯 Logo Menu\",\"description\":\"Create a logo that screams You.\",\"id\":\".logomenu\"},{\"header\":\"\",\"title\":\"🎭 Fun Menu\",\"description\":\"The bot's party hat. Games, jokes and instant ROFLs.\",\"id\":\".funmenu\"},{\"header\":\"\",\"title\":\"🎌 Anime Menu\",\"description\":\"Explore the anime world with cool features.\",\"id\":\".animemenu\"},{\"header\":\"\",\"title\":\"All Menu\",\"description\":\"Explore everything!\",\"id\":\".allmenu\"}]}]}" 
-                },
-                 {
-                "name": "quick_reply",
-                "buttonParamsJson": 
-                                "{\"display_text\":\"LIST MENU \",\"id\":\".menu2\"}"
-                 },
-                  {
-                  "name": "cta_url",
-                  "buttonParamsJson": "{\"display_text\":\"OWNER 🌟\",\"Url\":\"https://wa.me/918593848438\",\"merchant_url\":\"https://wa.me/message/918593848438\"}"
-                  },
-           ],
+                                "{\"title\":\"BUTTON MENU\",\"sections\":[{\"title\":\"HERE IS BUTTONS MENU\",\"highlight_label\":\"GLOBAL\",\"rows\":[{\"header\":\"\",\"title\":\"🧲 Bot Menu\",\"description\":\"The Bot's secret control panel.\",\"id\":\".botmenu\"},{\"header\":\"\",\"title\":\"🪅 Owner Menu\",\"description\":\"you aint izumie bruh\",\"id\":\".ownermenu\"},{\"header\":\"\",\"title\":\"♦️ Group Menu\",\"description\":\"Head of Grp!\",\"id\":\".groupmenu\"},{\"header\":\"\",\"title\":\" Sticker Menu\",\"description\":\"A rainbow of stickers.\",\"id\":\".stickermenu\"},{\"header\":\"\",\"title\":\"🛠️ Tool Menu\",\"description\":\"Your handy-dandy toolkit.\",\"id\":\".toolmenu\"},{\"header\":\"\",\"title\":\"🐯 Logo Menu\",\"description\":\"Create a logo that screams You.\",\"id\":\".logomenu\"},{\"header\":\"\",\"title\":\"🎭 Fun Menu\",\"description\":\"The bot's party hat. Games, jokes and instant ROFLs.\",\"id\":\".funmenu\"},{\"header\":\"\",\"title\":\"🎌 Anime Menu\",\"description\":\"Explore the anime world with cool features.\",\"id\":\".animemenu\"},{\"header\":\"\",\"title\":\"All Menu\",\"description\":\"Explore everything!\",\"id\":\".allmenu\"}]}]}" 
+              }
+                   ]
           })
         })
     }
