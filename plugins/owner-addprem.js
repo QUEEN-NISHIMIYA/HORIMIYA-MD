@@ -5,14 +5,14 @@ let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
     else who = m.chat
     let user = global.db.data.users[who]
-    if (!who) throw `✳️ Etiqueta o menciona a alguien\n\n📌 Ejemplo : ${usedPrefix + command} @user`
-if (global.prems.includes(who.split`@`[0])) throw '✳️ El usuario Mensionado Ya es premium'
+    if (!who) throw `✳️ Tag or mention someone\n\n📌 Example : ${usedPrefix + command} @user`
+if (global.prems.includes(who.split`@`[0])) throw '✳️ Niga is already a premium'
 global.prems.push(`${who.split`@`[0]}`)
 
 conn.reply(m.chat, `
 ✅ PREMIUM
 
-@${who.split`@`[0]} ahora te conviertes en un usuario premium
+@${who.split`@`[0]} now you're a premium user
 ┌───────────
 ▢ *Nombre:* ${user.name}
 └───────────
